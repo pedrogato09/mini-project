@@ -14,7 +14,7 @@ include "header.php";
     <th>Achternaam</th>
     <th>Klas</th>
     <th>Studentnummer</th>
-    <th>Email</th>
+    <th>Adres</th>
     <th>Acties</th>
 </tr>
 
@@ -25,14 +25,14 @@ $result = mysqli_query($conn,$sql);
 
 while($row = mysqli_fetch_assoc($result)){
     echo "<tr>";
-    echo "<td>".htmlspecialchars($row['voornaam'])."</td>";
-    echo "<td>".htmlspecialchars($row['achternaam'])."</td>";
-    echo "<td>".htmlspecialchars($row['klas'])."</td>";
-    echo "<td>".htmlspecialchars($row['studentnummer'])."</td>";
-    echo "<td>".htmlspecialchars($row['adres'])."</td>";
-    echo "<td>".
-         "<a href='edit.php?id=".urlencode($row['id'])."'>Edit</a> | ".
-         "<a href='delete.php?id=".urlencode($row['id'])."'>Delete</a>".
+    echo "<td>" . htmlspecialchars($row['voornaam']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['achternaam']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['klas']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['studentnummer']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['adres']) . "</td>";
+    echo "<td>" .
+         "<a href='edit.php?id=" . urlencode($row['id']) . "'>Edit</a> | " .
+         "<a href='delete.php?id=" . urlencode($row['id']) . "'>Delete</a>" .
          "</td>";
     echo "</tr>";
 }

@@ -22,8 +22,8 @@ include "header.php";
         <input type="text" name="studentnummer" required>
     </label><br><br>
 
-    <label>Email:<br>
-        <input type="email" name="adres" required>
+    <label>Adres:<br>
+        <input type="text" name="adres" required>
     </label><br><br>
 
     <input type="submit" value="Opslaan">

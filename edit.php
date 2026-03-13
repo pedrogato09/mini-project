@@ -34,8 +34,8 @@ $row = mysqli_fetch_assoc($result);
     <input type="text" name="studentnummer" value="<?php echo htmlspecialchars($row['studentnummer']); ?>">
 </label><br><br>
 
-<label>Email:<br>
-    <input type="email" name="adres" value="<?php echo htmlspecialchars($row['adres']); ?>">
+<label>Adres:<br>
+    <input type="text" name="adres" value="<?php echo htmlspecialchars($row['adres']); ?>">
 </label><br><br>
 
 <input type="submit" value="Update">

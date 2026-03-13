@@ -27,15 +27,15 @@ if(isset($_GET['zoek'])){
 
     if(mysqli_num_rows($result) > 0){
         echo "<table>";
-        echo "<tr><th>Voornaam</th><th>Achternaam</th><th>Klas</th><th>Studentnummer</th><th>Email</th><th>Acties</th></tr>";
+        echo "<tr><th>Voornaam</th><th>Achternaam</th><th>Klas</th><th>Studentnummer</th><th>Adres</th><th>Acties</th></tr>";
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
-            echo "<td>".htmlspecialchars($row['voornaam'])."</td>";
-            echo "<td>".htmlspecialchars($row['achternaam'])."</td>";
-            echo "<td>".htmlspecialchars($row['klas'])."</td>";
-            echo "<td>".htmlspecialchars($row['studentnummer'])."</td>";
-            echo "<td>".htmlspecialchars($row['adres'])."</td>";
-            echo "<td><a href='edit.php?id=".$row['id']."'>Edit</a> | <a href='delete.php?id=".$row['id']."'>Delete</a></td>";
+            echo "<td>" . htmlspecialchars($row['voornaam']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['achternaam']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['klas']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['studentnummer']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['adres']) . "</td>";
+            echo "<td><a href='edit.php?id=" . $row['id'] . "'>Edit</a> | <a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
         echo "</table>";
